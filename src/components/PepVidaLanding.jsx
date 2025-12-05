@@ -138,57 +138,52 @@ const PepVidaLanding = () => {
         </div>
       </nav>
 
-      {/* 3. Hero Section - Matches Reference (Blue Sky/Shadows/Pedestals) */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-[#EBF4F6]">
-         {/* Background Shadows/Leaves Effect */}
+      {/* 3. Hero Section - With Background Image */}
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+         {/* Background Image - No Blur */}
          <div className="absolute inset-0 pointer-events-none">
-            {/* Simulating the soft leaf shadows from the reference */}
-            <div className="absolute top-0 right-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1508614999368-9260051292e5?auto=format&fit=crop&q=80')] bg-cover opacity-10 mix-blend-multiply filter blur-sm"></div>
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#EBF4F6] via-transparent to-[#EBF4F6]/20"></div>
+            {/* Hero background image - crisp and clear */}
+            <div 
+              className="absolute inset-0 w-full h-full bg-cover bg-center"
+              style={{ backgroundImage: "url('media/heroimage.avif')" }}
+            ></div>
+            {/* Very subtle overlay on edges only */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#EBF4F6]/80 via-transparent to-[#EBF4F6]/30"></div>
          </div>
 
-         <div className="max-w-[1600px] mx-auto px-6 lg:px-12 w-full grid lg:grid-cols-2 gap-12 items-center relative z-10">
-            {/* Text Content */}
-            <div className="order-2 lg:order-1 pt-10 lg:pt-0">
-               <p className="text-xs font-bold tracking-[0.3em] text-[#1A1A1A]/60 uppercase mb-4 pl-1">Cyber Week Sale</p>
-               
-               <h1 className="text-6xl lg:text-9xl font-serif text-[#1A1A1A] leading-[0.9] mb-4">
-                  30% OFF <br/>
-                  <span className="font-sans font-bold">SITE WIDE</span>
-               </h1>
+         <div className="max-w-[1800px] mx-auto px-6 lg:px-12 w-full relative z-10">
+            <div className="flex items-center min-h-[85vh] py-20">
+               {/* Text Content - Far Left, doesn't interfere with center bottles */}
+               <div className="max-w-md lg:max-w-lg" style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.15)' }}>
+                  <p className="text-xs font-bold tracking-[0.3em] text-[#1A1A1A]/70 uppercase mb-4">Cyber Week Sale</p>
+                  
+                  <h1 className="text-5xl lg:text-8xl font-serif text-[#1A1A1A] leading-[0.9] mb-6">
+                     30% OFF <br/>
+                     <span className="font-sans font-bold">SITE WIDE</span>
+                  </h1>
 
-               <div className="flex items-center gap-2 text-sm font-medium text-[#1A1A1A] mb-10">
-                  <div className="bg-black text-white rounded-full p-0.5">
-                    <Check size={12} strokeWidth={4} />
+                  <div className="flex items-center gap-2 text-sm font-medium text-[#1A1A1A] mb-10">
+                     <div className="bg-black text-white rounded-full p-0.5">
+                       <Check size={12} strokeWidth={4} />
+                     </div>
+                     <span>Canada & US-wide shipping</span>
                   </div>
-                  <span>Canada & US-wide shipping</span>
-               </div>
 
-               <div className="flex flex-col sm:flex-row gap-4">
-                  <button 
-                    onClick={() => scrollToSection('shop')}
-                    className="bg-[#1A1A1A] text-white px-10 py-4 text-xs font-bold uppercase tracking-widest hover:bg-[#6B9080] transition-all shadow-lg"
-                  >
-                     Shop Sale
-                  </button>
-                  <button 
-                    onClick={() => scrollToSection('learn')}
-                    className="bg-white border border-[#1A1A1A]/10 text-[#1A1A1A] px-10 py-4 text-xs font-bold uppercase tracking-widest hover:border-[#1A1A1A] transition-all"
-                  >
-                     View Protocols
-                  </button>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                     <button 
+                       onClick={() => scrollToSection('shop')}
+                       className="bg-[#1A1A1A] text-white px-10 py-4 text-xs font-bold uppercase tracking-widest hover:bg-[#6B9080] transition-all shadow-lg"
+                     >
+                        Shop Sale
+                     </button>
+                     <button 
+                       onClick={() => scrollToSection('learn')}
+                       className="bg-white/90 backdrop-blur-sm border border-[#1A1A1A]/20 text-[#1A1A1A] px-10 py-4 text-xs font-bold uppercase tracking-widest hover:border-[#1A1A1A] transition-all"
+                     >
+                        View Protocols
+                     </button>
+                  </div>
                </div>
-            </div>
-
-            {/* Visual Composition - Single Large Product Image */}
-            <div className="order-1 lg:order-2 relative h-[500px] lg:h-[700px] flex items-center justify-center">
-               {/* Main HEAL Product Image - Large and Centered */}
-               <img 
-                 src="media/pepvidaheal_fixed.png" 
-                 alt="Heal" 
-                 className="w-full max-w-md lg:max-w-lg object-contain drop-shadow-2xl rounded-2xl"
-                 onError={(e) => { e.target.onerror = null; e.target.src = "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80"; }}
-               />
             </div>
          </div>
       </section>
