@@ -83,7 +83,7 @@ const PepVidaLanding = () => {
 
       {/* 2. Header - Matches Reference Image Structure */}
       <nav className={`sticky top-0 z-50 bg-[#FAF9F6]/95 backdrop-blur-sm transition-all duration-300 border-b border-[#1A1A1A]/5 ${scrolled ? 'py-3' : 'py-5'}`}>
-        <div className="max-w-[1800px] mx-auto px-6 lg:px-12 flex justify-between items-center h-full">
+        <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-12 flex justify-between items-center h-full">
           
           {/* Left: Search, Shop, Learn */}
           <div className="hidden md:flex items-center gap-8">
@@ -96,9 +96,9 @@ const PepVidaLanding = () => {
              </div>
           </div>
 
-          {/* Center: Logo */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-2">
-             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 375 374.999991" preserveAspectRatio="xMidYMid meet" className="w-10 h-10">
+          {/* Center: Logo - Responsive sizing */}
+          <div className="flex items-center gap-1.5 sm:gap-2 md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
+             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 375 374.999991" preserveAspectRatio="xMidYMid meet" className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10">
                <defs>
                  <clipPath id="71d2032c31">
                    <path d="M 50.75 53 L 324 53 L 324 322.050781 L 50.75 322.050781 Z M 50.75 53 " clipRule="nonzero"/>
@@ -108,11 +108,11 @@ const PepVidaLanding = () => {
                  <path fill="#1A1A1A" d="M 230.75 98.960938 C 230.75 98.960938 272.394531 82.769531 293.96875 76.886719 C 300.640625 75.070312 317.640625 73.242188 317.640625 73.242188 C 317.640625 73.242188 306.539062 89.703125 297.402344 99.351562 C 294.707031 102.199219 283.898438 112.851562 281.160156 115.660156 C 279.710938 117.144531 278.511719 118.867188 276.945312 120.792969 C 278.234375 122.988281 279.234375 125.164062 280.644531 127.019531 C 286.132812 134.230469 291.832031 141.273438 297.292969 148.5 C 302.207031 155 307.125 161.511719 311.605469 168.308594 C 314.074219 172.054688 316.121094 176.230469 317.519531 180.492188 C 322.09375 194.390625 324.257812 208.6875 322.667969 223.339844 C 322.046875 229.03125 321.148438 234.734375 319.859375 240.308594 C 314.714844 262.703125 304.582031 322.105469 304.582031 322.105469 C 304.582031 322.105469 286.359375 309.5625 280.65625 302.433594 C 274.949219 295.300781 266.558594 284.605469 265.125 279.441406 C 262.339844 269.394531 257.179688 260.582031 250.683594 252.457031 C 245.214844 245.625 239.769531 238.75 234.71875 231.609375 C 232.136719 227.964844 229.875 223.886719 228.460938 219.667969 C 225.085938 209.652344 220.753906 175.5 220.753906 175.5 C 220.753906 175.5 210.945312 184.988281 201.824219 191.179688 C 192.707031 197.367188 180.53125 203.707031 170.105469 210.371094 C 159.441406 217.179688 147.976562 222.730469 136.898438 228.898438 C 134.015625 230.507812 131.050781 232.089844 128.515625 234.164062 C 112.144531 247.53125 95.894531 261.046875 79.570312 274.480469 C 76.140625 277.300781 68.335938 282.597656 68.335938 282.597656 L 50.789062 248.433594 C 50.789062 248.433594 80.089844 236.273438 92.285156 229.570312 C 96.785156 227.097656 101.113281 224.285156 105.730469 222.074219 C 113.003906 218.59375 118.878906 213.484375 123.761719 207.253906 C 136.261719 191.328125 148.625 175.300781 160.992188 159.277344 C 165.992188 152.800781 171.179688 146.535156 177.617188 141.410156 C 179.015625 140.296875 184.152344 136.042969 184.152344 136.042969 C 184.152344 136.042969 148.300781 125.664062 133.890625 119.425781 C 129.191406 117.390625 124.636719 114.917969 120.300781 112.1875 C 107.003906 103.8125 79.9375 87.746094 74.996094 82.183594 C 70.054688 76.617188 55.351562 60.238281 55.351562 60.238281 C 55.351562 60.238281 72.371094 57.109375 78.988281 57.199219 C 90.824219 57.363281 102.507812 55.988281 114.203125 54.640625 C 129.167969 52.917969 143.816406 54.304688 157.953125 59.378906 C 167.625 62.851562 176.789062 67.511719 185.199219 73.550781 C 192.554688 78.839844 199.863281 84.222656 207.539062 89.011719 C 214.683594 93.464844 230.75 98.960938 230.75 98.960938 Z M 230.75 98.960938 " fillOpacity="1" fillRule="evenodd"/>
                </g>
              </svg>
-             <span className="text-2xl font-serif font-bold tracking-tight text-[#1A1A1A]">PEPVIDA</span>
+             <span className="text-lg sm:text-xl md:text-2xl font-serif font-bold tracking-tight text-[#1A1A1A]">PEPVIDA</span>
           </div>
 
           {/* Right: Currency, Account, Cart, Telegram */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-3 sm:gap-4 md:gap-6">
              <div className="hidden lg:flex items-center gap-1 text-xs font-medium cursor-pointer hover:opacity-70">
                 <img src="https://flagcdn.com/w20/ca.png" alt="CAD" className="w-4 h-auto shadow-sm"/>
                 <span>English</span>
@@ -127,13 +127,72 @@ const PepVidaLanding = () => {
                </div>
              </div>
 
-             <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest hover:text-[#6B9080] transition-colors">
-               <Send size={14}/> Telegram
+             <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" className="hidden sm:flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest hover:text-[#6B9080] transition-colors">
+               <Send size={14}/> <span className="hidden lg:inline">Telegram</span>
              </a>
 
-             <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-               {isMenuOpen ? <X size={20}/> : <Menu size={20}/>}
+             <button className="md:hidden p-1" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+               {isMenuOpen ? <X size={22}/> : <Menu size={22}/>}
              </button>
+          </div>
+        </div>
+
+        {/* Mobile Menu Dropdown */}
+        <div className={`md:hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+          <div className="px-4 py-6 bg-white border-t border-[#1A1A1A]/10">
+            <div className="flex flex-col gap-4">
+              {/* Search */}
+              <button className="flex items-center gap-3 text-sm font-semibold text-[#1A1A1A] hover:text-[#6B9080] transition-colors py-2">
+                <Search size={18} strokeWidth={1.5} />
+                <span>Search</span>
+              </button>
+              
+              {/* Shop */}
+              <button 
+                onClick={() => {
+                  scrollToSection('shop');
+                  setIsMenuOpen(false);
+                }} 
+                className="text-left text-sm font-semibold tracking-widest uppercase text-[#1A1A1A] hover:text-[#6B9080] transition-colors py-2"
+              >
+                Shop
+              </button>
+              
+              {/* Learn */}
+              <button 
+                onClick={() => {
+                  scrollToSection('learn');
+                  setIsMenuOpen(false);
+                }} 
+                className="text-left text-sm font-semibold tracking-widest uppercase text-[#1A1A1A] hover:text-[#6B9080] transition-colors py-2"
+              >
+                Learn
+              </button>
+
+              {/* Divider */}
+              <div className="border-t border-[#1A1A1A]/10 my-2"></div>
+
+              {/* Account */}
+              <button className="flex items-center gap-3 text-sm font-semibold text-[#1A1A1A] hover:text-[#6B9080] transition-colors py-2">
+                <User size={18} strokeWidth={1.5} />
+                <span>Account</span>
+              </button>
+
+              {/* Cart */}
+              <button className="flex items-center justify-between text-sm font-semibold text-[#1A1A1A] hover:text-[#6B9080] transition-colors py-2">
+                <div className="flex items-center gap-3">
+                  <ShoppingBag size={18} strokeWidth={1.5} />
+                  <span>Cart</span>
+                </div>
+                <span className="text-xs bg-[#1A1A1A] text-white px-2 py-0.5 rounded-full">0</span>
+              </button>
+
+              {/* Telegram */}
+              <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm font-semibold text-[#1A1A1A] hover:text-[#6B9080] transition-colors py-2">
+                <Send size={18} />
+                <span>Telegram</span>
+              </a>
+            </div>
           </div>
         </div>
       </nav>
